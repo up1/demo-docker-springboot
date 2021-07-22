@@ -1,7 +1,7 @@
 FROM openjdk:11.0.12-jdk-slim-buster as step01
 WORKDIR /src
 COPY . .
-RUN mvnw package
+RUN ./mvnw package
 
 FROM openjdk:11.0.12-jre-slim-buster
 WORKDIR /app
